@@ -53,10 +53,10 @@ async function getAllUser(req, res, next) {
 
 // rota para pagar um usuário pelo id
 async function getUser(req, res, next) {
-    const userId = req.params.id
+    const userId = res.locals.userId;
 
     try {
-        const user = await User.findAll({ where: { id: userId } })
+        const user = await User.findAll({ where: { id: userId } });
 
         if (!user) {
             throw new createHttpError(404, "Usuário não encontrado");
