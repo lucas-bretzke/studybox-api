@@ -8,25 +8,19 @@ const path = require("path");
 
 //rota para ciar aula
 async function createAula(req, res, next) {
-    const { titulo, descricao, data, materia_id } = req.body
-    const file = req.file
+    const { titulo, descricao, data, turmaId } = req.body    
 
     try {
         const [aula, created] = await Aula.findOrCreate({
             where: { titulo: titulo },
-            defaults: { descricao, data, materia_id }
+            defaults: { descricao, data, turma_id: turmaId }
         });
 
         if (!created) {
-            if (file) {
-                fs.unlinkSync(path.resolve(__dirname, "..", "uploads", file.filename));
-            }
-
             throw new createHttpError(409, "Aula já existe");
         }
 
-        return res.status(201).json(aula)
-
+        return res.status(201).json(aula);
     } catch (error) {
         console.log(error)
         next(error)
@@ -36,7 +30,6 @@ async function createAula(req, res, next) {
 //rota para pegar todas as aula
 async function getAllAula(req, res, next) {
     try {
-
         const aulas = await Aula.findAll();
 
         return res.status(200).json(aulas)
@@ -58,8 +51,7 @@ async function getAulaById(req, res, next) {
             throw new createHttpError(404, "Aula não encontrada");
         }
 
-        return res.status(200).json(aula)
-
+        return res.json(aula)
     } catch (error) {
         console.log(error)
         next(error)
@@ -69,7 +61,7 @@ async function getAulaById(req, res, next) {
 //rota para aditar uma aula
 async function editAula(req, res, next) {
     const aulaId = req.params.id;
-    const { titulo, descricao, data } = req.body
+    const {  descricao } = req.body
 
     try {
 
@@ -79,12 +71,11 @@ async function editAula(req, res, next) {
             throw new createHttpError(404, "Aula não encontrada");
         }
 
-        Object.assign(aula, { titulo, descricao, data })
+        aula.descricao = descricao;
 
         await aula.save()
 
-        return res.status(200).end()
-
+        return res.status(204).end()
     } catch (error) {
         console.log(error)
         next(error)

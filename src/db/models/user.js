@@ -6,8 +6,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      this.belongsToMany(models.Turma, { through: "turmas_users", foreignKey: "user_id", as: "turmas" });
-      this.belongsToMany(models.Prova, { through: "notas", foreignKey: "user_id" });
+      this.belongsToMany(models.Turma, { through: "turmas_users", foreignKey: "user_id", as: "turmas" });      
     }
 
     isPasswordValid(password) {

@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Turma extends Model {
     static associate(models) {
       this.belongsToMany(models.User, { through: "turmas_users", foreignKey: "turma_id", as: "users" });      
+      this.hasMany(models.Aula, { foreignKey: "turma_id" });
     }
   };
   Turma.init({

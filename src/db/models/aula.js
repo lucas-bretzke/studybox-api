@@ -6,7 +6,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Aula extends Model {
     static associate(models) {
-      this.belongsTo(models.Materia, { foreignKey: "materia_id" });
+      this.belongsTo(models.Turma, { foreignKey: "turma_id" });
     }
 
   };
