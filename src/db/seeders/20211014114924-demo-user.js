@@ -24,8 +24,43 @@ module.exports = {
         },
         {
           id: "90fecfae-1be7-4d44-89d9-2ff951281c81",
-          name: 'Pedrinho',
-          email: "pedrinho@email.com",
+          name: 'Pedro Henrique',
+          email: "pedrohenrique@email.com",
+          password: bcrypt.hashSync("123456", 10),
+          permissao: "aluno",
+          created_at: new Date(),
+          updated_at: new Date()
+        },
+        {
+          id: "90fecfae-1be7-4d44-89d9-2ff951281c42",
+          name: 'Gabriel Duwe',
+          email: "gabriel@email.com",
+          password: bcrypt.hashSync("123456", 10),
+          permissao: "aluno",
+          created_at: new Date(),
+          updated_at: new Date()
+        },
+        {
+          id: "90fecfae-1be7-4d44-89d9-2ff951281c01",
+          name: 'Lucas Bretzke',
+          email: "lucasbretzke@email.com",
+          password: bcrypt.hashSync("123456", 10),
+          permissao: "aluno",
+          created_at: new Date(),
+          updated_at: new Date()
+        },{
+          id: "90fecfae-1be7-4d44-89d9-2ff951281c33",
+          name: 'Diego Lamas',
+          email: "diegolamas@email.com",
+          password: bcrypt.hashSync("123456", 10),
+          permissao: "aluno",
+          created_at: new Date(),
+          updated_at: new Date()
+        },
+        {
+          id: "90fecfae-1be7-4d44-89d9-2ff951281c72",
+          name: 'Jonatan Busch',
+          email: "jonatanbusch@email.com",
           password: bcrypt.hashSync("123456", 10),
           permissao: "aluno",
           created_at: new Date(),

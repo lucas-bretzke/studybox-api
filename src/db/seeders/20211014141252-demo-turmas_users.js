@@ -33,6 +33,36 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date()
       },    
+      {
+        turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
+        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c81',
+        created_at: new Date(),
+        updated_at: new Date()
+      },
+      {
+        turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
+        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c42',
+        created_at: new Date(),
+        updated_at: new Date()
+      },
+      {
+        turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
+        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c01',
+        created_at: new Date(),
+        updated_at: new Date()
+      },
+      {
+        turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
+        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c33',
+        created_at: new Date(),
+        updated_at: new Date()
+      },
+      {
+        turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
+        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c72',
+        created_at: new Date(),
+        updated_at: new Date()
+      },
     ], {});
   },
   down: async (queryInterface, Sequelize) => {
