@@ -35,31 +35,31 @@ module.exports = {
       },    
       {
         turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
-        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c81',
+        user_id: 'd370fbf5-60dc-4e51-b141-840ce09e21cd',
         created_at: new Date(),
         updated_at: new Date()
       },
       {
         turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
-        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c42',
+        user_id: '2bdee9c4-2635-4bd4-945d-5c9c62003bbc',
         created_at: new Date(),
         updated_at: new Date()
       },
       {
         turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
-        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c01',
+        user_id: '39525568-ed94-41c3-b224-b3418d229fe5',
         created_at: new Date(),
         updated_at: new Date()
       },
       {
         turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
-        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c33',
+        user_id: '234fea95-489c-4bdc-9efc-6ea0d111110b',
         created_at: new Date(),
         updated_at: new Date()
       },
       {
         turma_id: "0a8ac3c5-3a3a-475d-ae30-5bb860c886a4",
-        user_id: '90fecfae-1be7-4d44-89d9-2ff951281c72',
+        user_id: '66bdd9cb-0470-4d91-86da-e2adc044a98b',
         created_at: new Date(),
         updated_at: new Date()
       },

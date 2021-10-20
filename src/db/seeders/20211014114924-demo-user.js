@@ -23,7 +23,7 @@ module.exports = {
           updated_at: new Date()
         },
         {
-          id: "90fecfae-1be7-4d44-89d9-2ff951281c81",
+          id: "d370fbf5-60dc-4e51-b141-840ce09e21cd",
           name: 'Pedro Henrique',
           email: "pedrohenrique@email.com",
           password: bcrypt.hashSync("123456", 10),
@@ -32,7 +32,7 @@ module.exports = {
           updated_at: new Date()
         },
         {
-          id: "90fecfae-1be7-4d44-89d9-2ff951281c42",
+          id: "2bdee9c4-2635-4bd4-945d-5c9c62003bbc",
           name: 'Gabriel Duwe',
           email: "gabriel@email.com",
           password: bcrypt.hashSync("123456", 10),
@@ -41,7 +41,7 @@ module.exports = {
           updated_at: new Date()
         },
         {
-          id: "90fecfae-1be7-4d44-89d9-2ff951281c01",
+          id: "39525568-ed94-41c3-b224-b3418d229fe5",
           name: 'Lucas Bretzke',
           email: "lucasbretzke@email.com",
           password: bcrypt.hashSync("123456", 10),
@@ -49,7 +49,7 @@ module.exports = {
           created_at: new Date(),
           updated_at: new Date()
         },{
-          id: "90fecfae-1be7-4d44-89d9-2ff951281c33",
+          id: "234fea95-489c-4bdc-9efc-6ea0d111110b",
           name: 'Diego Lamas',
           email: "diegolamas@email.com",
           password: bcrypt.hashSync("123456", 10),
@@ -58,7 +58,7 @@ module.exports = {
           updated_at: new Date()
         },
         {
-          id: "90fecfae-1be7-4d44-89d9-2ff951281c72",
+          id: "66bdd9cb-0470-4d91-86da-e2adc044a98b",
           name: 'Jonatan Busch',
           email: "jonatanbusch@email.com",
           password: bcrypt.hashSync("123456", 10),
