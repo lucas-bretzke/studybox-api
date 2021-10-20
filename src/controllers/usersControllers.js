@@ -56,7 +56,7 @@ async function getUser(req, res, next) {
     const userId = res.locals.userId;
 
     try {
-        const user = await User.findAll({ where: { id: userId } });
+        const user = await User.findOne({ where: { id: userId } });
 
         if (!user) {
             throw new createHttpError(404, "Usuário não encontrado");

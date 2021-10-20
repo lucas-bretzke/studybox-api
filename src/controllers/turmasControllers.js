@@ -1,4 +1,4 @@
-const { Turma, User } = require("../db/models");
+const { Turma, User, Aula } = require("../db/models");
 const createHttpError = require("http-errors");
 const fs = require("fs");
 const path = require("path");
@@ -125,6 +125,38 @@ async function getTurmas(req, res, next) {
     }
 }
 
+async function getAlunosFromTurma(req, res, next) {
+    const turmaId = req.params.id;
+    try {        
+        const turma = await Turma.findOne({ where: { id: turmaId }});
+        
+        if (!turma) {
+            throw new createHttpError(404, "Turma não encontrada");
+        }
+
+        const usersOfTurma = await turma.getUsers();
+        const alunos = usersOfTurma.filter(user => user.permissao === "aluno");
+
+        return res.json(alunos);
+    } catch (error) {
+        console.log(error)
+        next(error)
+    }
+}
+
+async function getAllAulasFromTurma(req, res, next) {
+    const turmaId = req.params.id;
+
+    try {
+        const aulas = await Aula.findAll({ where: { turma_id: turmaId } });
+
+        return res.json(aulas);
+    } catch (error) {
+        console.log(error);
+        next(error);
+    }
+}
+
 
 module.exports = {
     createTurma,
@@ -132,6 +164,8 @@ module.exports = {
     getTurmaById,
     editTurma,
     deleteTurma,
-    getTurmas
+    getTurmas,
+    getAlunosFromTurma,
+    getAllAulasFromTurma
 }
 //

@@ -1,10 +1,8 @@
 const router = require("express").Router();
-const multer = require("multer");
-const multerConfig = require("../config/multer");
 const aulaControllers = require("../controllers/aulaControllers")
 
 
-router.post("/", multer(multerConfig).single("avatar"), aulaControllers.createAula);
+router.post("/", aulaControllers.createAula);
 
 router.get("/:id", aulaControllers.getAulaById);
 

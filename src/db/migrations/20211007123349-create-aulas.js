@@ -20,12 +20,12 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       },
-      materia_id: {
+      turma_id: {
         allowNull: false,        
         primaryKey: true,
         type: Sequelize.UUID,
         reference: {
-          model: "materias",
+          model: "turmas",
           key: "id"
         },
         onDelete: "CASCADE",
