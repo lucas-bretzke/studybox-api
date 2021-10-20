@@ -25,7 +25,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.UUID,
         reference: {
-          model: "materias",
+          model: "turmas",
           key: "id"
         },
         onDelete: "CASCADE",
